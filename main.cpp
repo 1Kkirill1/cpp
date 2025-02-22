@@ -1,13 +1,14 @@
 #include <iostream>
-#include "dz1.h"
+#include "dzH.h"
 #include "dz2.h"
 #include "dz3.h"
 #include "dzG.h"
 
 int main() {
-    dzG();
+    //dzG();
     // dz2();
     //dz3();
+    dzH();
 }
 // TIP See CLion help at <a
 // href="https://www.jetbrains.com/help/clion/">jetbrains.com/help/clion/</a>.
