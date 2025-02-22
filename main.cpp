@@ -1,6 +1,7 @@
 #include <iostream>
 #include "dz1.h"
 #include "dz2.h"
+#include "dz3.h"
 // TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 int main1() {
@@ -20,9 +21,12 @@ int main1() {
     return 0;
 }
 
+
+
 int main() {
-    dz1();
+    //dz1();
     // dz2();
+     dz3();
 }
 // TIP See CLion help at <a
 // href="https://www.jetbrains.com/help/clion/">jetbrains.com/help/clion/</a>.
