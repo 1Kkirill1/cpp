@@ -2,9 +2,10 @@
 #include "dz1.h"
 #include "dz2.h"
 #include "dz3.h"
+#include "dzG.h"
 
 int main() {
-    dz1();
+    dzG();
     // dz2();
     //dz3();
 }
