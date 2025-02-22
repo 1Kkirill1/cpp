@@ -44,18 +44,16 @@ public:
     }
 };
 
-int dzD() {
-    // Создаем объекты машин
-    std::unique_ptr<Car> car1 = std::make_unique<SportCar>();
-    std::unique_ptr<Car> car2 = std::make_unique<Tractor>();
 
-    // Используем вектор для хранения указателей на объекты Car
-    std::vector<std::unique_ptr<Car>> cars;
-    cars.push_back(std::move(car1));
-    cars.push_back(std::move(car2));
+
+int dzD() {
+    std::vector<Car*> cars;
+    cars.push_back(new Tractor());
+    cars.push_back(new SportCar());
+    cars.push_back(new Car());
 
     // Вызываем метод draw для каждого объекта
-    for (const auto& car : cars) {
+    for (const auto car : cars) {
         car->draw(); // Полиморфный вызов
     }
 

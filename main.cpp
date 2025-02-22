@@ -10,8 +10,8 @@ int main() {
     // dz2();
     //dz3();
     //dzH();
-    //dzD();
-    dzC();
+    dzD();
+    //dzC();
 }
 // TIP See CLion help at <a
 // href="https://www.jetbrains.com/help/clion/">jetbrains.com/help/clion/</a>.
