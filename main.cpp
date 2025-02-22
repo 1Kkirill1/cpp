@@ -3,12 +3,13 @@
 #include "dz2.h"
 #include "dz3.h"
 #include "dzG.h"
-
+#include "dzD.h"
 int main() {
     //dzG();
     // dz2();
     //dz3();
-    dzH();
+    //dzH();
+    dzD();
 }
 // TIP See CLion help at <a
 // href="https://www.jetbrains.com/help/clion/">jetbrains.com/help/clion/</a>.
