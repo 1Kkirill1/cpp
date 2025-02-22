@@ -1,20 +1,52 @@
 #include <iostream>
+#include <string>
 
-// TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-int dz1() {
-    // TIP Press <shortcut actionId="RenameElement"/> when your caret is at the
-    // <b>lang</b> variable name to see how CLion can help you rename it.
-    auto lang = "C++";
-    std::cout << "Hello and welcome to " << lang << "!\n";
+// Дана строка, напечатать Да, если она
+// представима в виде
+// математического выражения,
+// Zв котором не могут две скобки идти подряд,
+// иначе напечатать нет
+// Необходимо реализовать конечный автомат
 
-    for (int i = 1; i <= 5; i++) {
-        // TIP Press <shortcut actionId="Debug"/> to start debugging your code.
-        // We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/>
-        // breakpoint for you, but you can always add more by pressing
-        // <shortcut actionId="ToggleLineBreakpoint"/>.
-        std::cout << "i = " << i << std::endl;
+
+enum class State { Start, AfterOpen, AfterClose };
+
+bool checkExpression(const std::string& expression) {
+    auto currentState = State::Start;
+
+    for (const char c : expression) {
+        switch (currentState) {
+            case State::Start:
+                if (c == '(' || c == '[' || c == '{')
+                    currentState = State::AfterOpen;
+                else if (c == ')' || c == ']' || c == '}')
+                    return false;
+            break;
+
+            case State::AfterOpen:
+                if (c == '(' || c == '[' || c == '{')
+                    return false;
+                if (c == ')' || c == ']' || c == '}')
+                    currentState = State::AfterClose;
+            break;
+
+            case State::AfterClose:
+                if (c == ')' || c == ']' || c == '}')
+                    return false;
+
+                currentState = State::Start;
+        }
     }
+
+    return true;
+}
+
+int dz1() {
+    const std::string expressionStr = "a+b+c+(h+w)=sb";
+
+    const bool result = checkExpression(expressionStr);
+
+    std::cout << (result ? "Да" : "Нет") << std::endl;
 
     return 0;
 }
