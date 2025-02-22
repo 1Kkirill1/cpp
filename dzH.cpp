@@ -46,7 +46,6 @@ bool isDivisibleBy3(const std::string& str) {
 }
 
 int dzH() {
-
      std::cout << "Является ли строка число делящимся на 3\n";
     isDivisibleBy3("028946703");
     return 0;
