@@ -4,9 +4,14 @@ project(dz)
 set(CMAKE_CXX_STANDARD 20)
 
 add_executable(dz main.cpp
-        dzD.cpp dzD.h
+        dzA.cpp dzA.h
+        dzB.cpp dzB.h
         dzC.cpp dzC.h
-        dz3.cpp dz3.h
-        dzH.cpp dzH.h
+        dzD.cpp dzD.h
+        dzE.cpp dzE.h
+        dzF.cpp dzF.h
         dzG.cpp dzG.h
+        dzH.cpp dzH.h
+        dzI.cpp dzI.h
+        dzJ.cpp dzJ.h
 )
